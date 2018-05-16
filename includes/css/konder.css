@@ -1,0 +1,565 @@
+/*------ BASIC SETUP -----*/
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { 
+    font-family: Oswald, Arilal, sans-serif;
+    font-size: 20px;
+}
+/*------  HEADER -----*/
+header {
+    background-image: url(img/basic2.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    z-index: 2;
+}
+
+#wrapper{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    position: absolute;
+}
+.menuTriggerHolder {
+    position: fixed;
+    text-align: center;
+    z-index: 100;
+    margin: 1.5rem 0 0 1.5rem;
+}
+.menuCont {
+    display: block;
+    position: relative;
+}
+
+
+.logoCont{
+    display: inline-block;
+    position: relative;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin: 20px;
+}
+
+.main-nav {
+    list-style: none;
+    position: relative;
+    margin: auto;
+    width: 70%;
+}
+
+.main-nav li {
+    display: block;
+    padding: 5px;
+}
+.menutext {
+    color: #ffffff;
+}
+
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #b36b00;
+    cursor: pointer;
+}
+
+/*------ INDEX MENUCAT BTN -----*/
+
+#menuHolder {
+    position: relative;
+    width: 1140px;
+    top: 50%;
+    margin: auto;
+    text-align: center;
+    z-index: 2;
+}
+
+.MenuCategory {
+    position: relative;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    text-align: center;
+}
+
+.menuBtn {
+    background-color: transparent;
+    display: inline-block;
+    padding: 5px 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: hand, Arial, sans-serif;
+    font-size: 200%;
+    text-align: center;
+    border-bottom: 4px solid transparent;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+
+.menuBtn:hover {
+    border-bottom: 4px solid #b36b00;
+    background-color: rgba(179, 107, 0, 0.3);
+    color: #000000;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;;
+    color: #ffffff;
+    background-color: transparent;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    border-image: none;
+}
+
+/*-----------PROFIL PAGE---------------- */
+
+.ProfPage {
+    position: relative;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    text-align: center;
+}
+
+ /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/*------------MODAL---------------  */
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.closeReg {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeReg:hover,
+.closeReg:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+.closeRec {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeRec:hover,
+.closeRec:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.closeRecEdit {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeRecEdit:hover,
+.closeRecEdit:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+.closeRecUp {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeRecUp:hover,
+.closeRecUp:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+.closeForg {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeForg:hover,
+.closeForg:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+ /* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #b36b00;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    top: 150px;
+}
+
+#forg_pass {
+    font-size: 80%;
+    cursor: pointer;
+}
+
+#forg_basic_msg {
+    font-size: 80%;
+}
+
+#loginBtn {
+    background-color: #b36b00;
+    color: #ffffff;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+#btn_kuld {
+    background-color: #b36b00;
+    color: #ffffff;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+#btn_reg {
+    background-color: #b36b00;
+    color: #ffffff;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+#btn_ok {
+    background-color: #b36b00;
+    color: #ffffff;
+    font-size: 100%;
+    cursor: pointer;
+    display: none;
+}
+
+#forg_btn_ok {
+    background-color: #b36b00;
+    color: #ffffff;
+    font-size: 100%;
+    cursor: pointer;
+    display: none;
+}
+
+#mod_forg {
+    display: none;
+}
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 150px; opacity: 1}
+} 
+/*------RECIPE CONT---*/
+
+
+#dinamic {
+    position: fixed;
+    display: none;
+    width: 100%;
+}
+
+.subcat_holder {
+    position: relative;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin: auto;
+}
+
+.check_cont {
+    position: relative;
+    width: 100%;
+    display: initial;
+    margin-left: 2%;
+}
+
+#rec_holder {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    margin-top: 2.5rem;
+}
+
+.panel_rec {
+    position: relative;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    margin-right: 5%;
+}
+
+.btnLink {
+    float: right;
+    background-color: transparent;
+    display: inline-block;
+    padding: 5px 30px;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 4px solid transparent;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+
+.btnLink:hover {
+    border-bottom: 4px solid #b36b00;
+    background-color: rgba(179, 107, 0, 0.3);
+    color: #000000;
+    cursor: pointer;
+}
+
+.btnWiev {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 4px solid transparent;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+
+.btnWiev:hover {
+    border-bottom: 4px solid #b36b00;
+    background-color: rgba(179, 107, 0, 0.3);
+    color: #000000;
+    cursor: pointer;
+}
+/*---------- MODAL REC ---------*/
+#modalRecBody {
+    min-height: 20rem;
+}
+.modalRecContent {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 85%;
+    min-height: 25rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetoprec;
+    animation-duration: 0.4s;
+    top: 15px;
+}
+
+.panel_heading {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    color: #000000;
+    font-family: Oswald;
+    font-size: 220%;
+    padding-bottom: 0.5rem;
+}
+
+#rec_modal_open {
+    position: relative;
+    margin: auto;
+    left: 1.5rem;
+    display: inline-block;
+    text-align: center;
+    margin-right: 1.5rem;
+}
+
+.origTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#recOrigImgHolder {
+    max-width: 350px;
+    float: right;
+    position: relative;
+    text-align: center;
+}
+
+#kattints {
+    color: #000000;
+}
+
+
+@keyframes animatetoprec {
+    from {top: -300px; opacity: 0}
+    to {top: 15px; opacity: 1}
+} 
+/* -------------MODAL REC EDIT---------------------*/
+
+#deleteLogo {
+    max-width: 1rem;
+    height: auto;
+}
+
+#delRow {
+    display: inline-block;
+}
+
+
+
+
+/* --------MODAL REC UP ---------*/
+.btn {
+    color: #000000;
+    border: 1px solid #000000;
+}
+.impField {
+    display: inline-block;
+}
+
+.ingHold {
+    width: 100%;
+    height: auto;
+}
+
+#addRow {
+    cursor: pointer;
+}
+
+#recProcText {
+    width: 95%;
+}
+
+.procText {
+    width: 100%;
+}
+
+.recLink { 
+}
+
+#submenu {
+    display: none;
+}
+
+#submenu2 {
+    display: none;
+}
+
+#kulsoLink {
+   display: none; 
+}
+.remarcHold {
+    display: none;
+}
+
+.recOwn {
+    color: #000000;
+}
+
+.remarcText {
+    width: 100%;
+}
+
+#recProcRemarc {
+    width: 95%
+}
+
+#linkHolder {
+    width: 95%;
+}
+
+
+/*---------- MODAL REC ---------*/
+#modalRecUpBody {
+    min-height: 20rem;
+}
+.modalRecUpContent {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 85%;
+    min-height: 25rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetoprec;
+    animation-duration: 0.4s;
+    top: 15px;
+}
+
+
+
+@keyframes animatetoprec {
+    from {top: -300px; opacity: 0}
+    to {top: 15px; opacity: 1}
+} 
